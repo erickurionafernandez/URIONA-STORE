@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uriona Store - Panel de Control</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .dashboard {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 900px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header p {
+      color: #b8c6db;
+      font-size: 0.95rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .card .value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00d2ff;
+      margin-bottom: 5px;
+    }
+
+    .card .label {
+      font-size: 0.85rem;
+      color: #b8c6db;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #00d2ff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 8px;
+    }
+
+    .alertas {
+      background: rgba(255, 193, 7, 0.1);
+      border-left: 4px solid #ffc107;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 25px;
+    }
+
+    .alertas p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: #ffe082;
+    }
+
+    .alertas p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tabla {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .tabla th {
+      text-align: left;
+      padding: 12px;
+      font-size: 0.85rem;
+      color: #b8c6db;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .tabla td {
+      padding: 12px;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tabla tr:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .positivo {
+      color: #4caf50;
+      font-weight: 600;
+    }
+
+    .negativo {
+      color: #f44336;
+      font-weight: 600;
+    }
+
+    .barra {
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255, 255, 255, 0.1);
+      margin-top: 4px;
+      overflow: hidden;
+    }
+
+    .barra-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.8rem;
+      color: #8899aa;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 1.6rem;
+      }
+      .card .value {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="header">
+      <h1>📊 Uriona Store</h1>
+      <p>Panel de Control - Sistema de Gestión de Inventario</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📦</div>
+        <div class="value">+34</div>
+        <div class="label">Vendidos este mes</div>
+      </div>
+      <div class="card">
+        <div class="icon">📈</div>
+        <div class="value">29.1%</div>
+        <div class="label">Margen promedio</div>
+      </div>
+      <div class="card">
+        <div class="icon">🔄</div>
+        <div class="value">2.4x</div>
+        <div class="label">Rotación de stock</div>
+      </div>
+      <div class="card">
+        <div class="icon">⏱️</div>
+        <div class="value">-40%</div>
+        <div class="label">Tiempo de gestión</div>
+      </div>
+    </div>
+
+    <div class="section-title">⚠️ Alertas del Sistema</div>
+    <div class="alertas">
+      <p>🔴 3 productos llevan más de 60 días en inventario.</p>
+      <p>🟡 El proveedor principal entrega en 3 días. Planifica tu inversión.</p>
+      <p>🟢 Los accesorios tienen un margen 2.5x superior al promedio.</p>
+    </div>
+
+    <div class="section-title">📊 Rendimiento por Categoría</div>
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Participación</th>
+          <th>Margen</th>
+          <th>Tendencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Celulares</td>
+          <td>
+            45%
+            <div class="barra"><div class="barra-fill" style="width: 45%;"></div></div>
+          </td>
+          <td class="positivo">25%</td>
+          <td class="positivo">▲ Creciendo</td>
+        </tr>
+        <tr>
+          <td>Accesorios</td>
+          <td>
+            30%
+            <div class="barra"><div class="barra-fill" style="width: 30%;"></div></div>
+          </td>
+          <td class="positivo">80%</td>
+          <td class="positivo">▲ Creciendo</td>
+        </tr>
+        <tr>
+          <td>Electrónica</td>
+          <td>
+            15%
+            <div class="barra"><div class="barra-fill" style="width: 15%;"></div></div>
+          </td>
+          <td class="positivo">30%</td>
+          <td>▬ Estable</td>
+        </tr>
+        <tr>
+          <td>Experimentales</td>
+          <td>
+            10%
+            <div class="barra"><div class="barra-fill" style="width: 10%; background: #f44336;"></div></div>
+          </td>
+          <td class="negativo">7%</td>
+          <td class="negativo">▼ Bajando</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      Sistema de gestión de inventario - Proyecto de Grado | Uriona Store © 2026
+    </div>
+  </div>
+</body>
+</html>
