@@ -9,8 +9,7 @@ El sitio muestra estadísticas, alertas del sistema y el rendimiento por categor
 ## 🛠️ Tecnologías utilizadas
 
 - HTML5
-- CSS3 (diseño responsivo)
 
 ## 🚀 Cómo verlo
 
-Visita el sitio publicado en: `https://[tu-usuario].github.io/uriona-store/`
+Visita el sitio publicado en: `https://erickurionafernandez.github.io/URIONA-STORE/`
