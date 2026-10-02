@@ -2,67 +2,51 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Uriona Store</title>
-  <style>
-    body {
-      background: #1a1a2e;
-      color: #eee;
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1 { color: #00d2ff; text-align: center; }
-    h2 { color: #00d2ff; border-bottom: 1px solid #333; padding-bottom: 5px; }
-    .stats { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
-    .card {
-      background: #16213e;
-      padding: 15px;
-      border-radius: 8px;
-      flex: 1;
-      min-width: 120px;
-      text-align: center;
-    }
-    .card .num { font-size: 1.5em; color: #00d2ff; font-weight: bold; }
-    .card .lbl { font-size: 0.8em; color: #aaa; }
-    ul { line-height: 1.8; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { padding: 8px; text-align: left; border-bottom: 1px solid #333; }
-    th { color: #00d2ff; }
-    .ok { color: #4caf50; }
-    .mal { color: #f44336; }
-    footer { text-align: center; margin-top: 30px; font-size: 0.8em; color: #666; }
-  </style>
+  <title>Uriona Store - Reventa de celulares y accesorios</title>
 </head>
 <body>
 
-  <h1>Uriona Store</h1>
-  <p style="text-align:center; color:#aaa;">Panel de control - Reventa de celulares y accesorios</p>
+  <header>
+    <h1>Uriona Store</h1>
+    <p>Reventa de celulares y accesorios en Oruro</p>
+  </header>
 
-  <h2>Resumen del mes</h2>
-  <div class="stats">
-    <div class="card"><div class="num">34</div><div class="lbl">Vendidos</div></div>
-    <div class="card"><div class="num">29.1%</div><div class="lbl">Margen</div></div>
-    <div class="card"><div class="num">2.4x</div><div class="lbl">Rotación</div></div>
-  </div>
+  <nav>
+    <a href="#productos">Productos</a>
+    <a href="#como-comprar">Cómo comprar</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-  <h2>Alertas</h2>
-  <ul>
-    <li>🔴 3 productos llevan más de 60 días en inventario.</li>
-    <li>🟡 Proveedor de celulares entrega en 3 días.</li>
-    <li>🟢 Accesorios tienen margen 2.5x superior al promedio.</li>
-  </ul>
+  <main>
 
-  <h2>Rendimiento por categoría</h2>
-  <table>
-    <tr><th>Categoría</th><th>Participación</th><th>Margen</th></tr>
-    <tr><td>Celulares</td><td>45%</td><td class="ok">25%</td></tr>
-    <tr><td>Accesorios</td><td>30%</td><td class="ok">80%</td></tr>
-    <tr><td>Electrónica</td><td>15%</td><td class="ok">30%</td></tr>
-    <tr><td>Experimentales</td><td>10%</td><td class="mal">7%</td></tr>
-  </table>
+    <section id="productos">
+      <h2>¿Qué ofrezco?</h2>
+      <ul>
+        <li>Celulares Samsung, Motorola y Honor</li>
+        <li>Accesorios: cargadores, carplay, fundas</li>
+        <li>Electrónica: radios, monitores, pantallas</li>
+      </ul>
+    </section>
 
-  <footer>Uriona Store © 2026 - Proyecto de Grado</footer>
+    <section id="como-comprar">
+      <h2>¿Cómo comprar?</h2>
+      <p>
+        Publico mis productos en Facebook. Si ves algo que te interesa,
+        escríbeme por mensaje y coordinamos la entrega en Oruro.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Facebook: Uriona Store</p>
+      <p>Ciudad: Oruro, Bolivia</p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Uriona Store - Proyecto de Grado
+  </footer>
 
 </body>
 </html>
