@@ -1,10 +1,6 @@
 # 🏪 Uriona Store - Panel de Control
 
-Este es un proyecto de sitio web de prueba que simula el panel de control de un sistema de gestión de inventario para el emprendimiento **Uriona Store**.
-
-## 📋 Descripción
-
-El sitio muestra estadísticas, alertas del sistema y el rendimiento por categoría de productos.
+Mi proyecto es un sitio web para Uriona Store, un emprendimiento de reventa de celulares y accesorios en Oruro. El sitio está pensado para mostrar mis productos y facilitar el contacto con clientes. El problema que resuelve es que hoy no tengo una página donde mostrar mi catálogo de forma ordenada; todo lo manejo por Facebook.
 
 ## 🛠️ Tecnologías utilizadas
 
