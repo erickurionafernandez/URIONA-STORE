@@ -14,11 +14,16 @@
       padding: 0 20px;
       line-height: 1.6;
     }
+    body.oscuro {
+      background: #121212;
+      color: #eee;
+    }
     header {
       border-bottom: 2px solid #222;
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
+    body.oscuro header { border-bottom-color: #eee; }
     h1 { margin: 0; }
     nav {
       display: flex;
@@ -31,6 +36,7 @@
       text-decoration: none;
       font-weight: bold;
     }
+    body.oscuro nav a { color: #eee; }
     nav a:hover { text-decoration: underline; }
     section {
       background: #fff;
@@ -38,6 +44,10 @@
       border-radius: 10px;
       padding: 15px 20px;
       margin-bottom: 20px;
+    }
+    body.oscuro section {
+      background: #1e1e1e;
+      border-color: #eee;
     }
     h2 { margin-top: 0; }
     form {
@@ -69,23 +79,11 @@
       color: #666;
       text-align: center;
     }
-
-    /* MEDIA QUERY PARA MÓVIL */
     @media (max-width: 600px) {
-      body {
-        margin: 20px auto;
-        padding: 0 15px;
-      }
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-      section {
-        padding: 12px 15px;
-      }
-      form {
-        flex-direction: column;
-      }
+      body { margin: 20px auto; padding: 0 15px; }
+      nav { flex-direction: column; gap: 10px; }
+      section { padding: 12px 15px; }
+      form { flex-direction: column; }
     }
   </style>
 </head>
@@ -94,6 +92,7 @@
   <header>
     <h1>Uriona Store</h1>
     <p>Venta de celulares y accesorios en Oruro</p>
+    <button onclick="document.body.classList.toggle('oscuro')">🌙 / ☀️</button>
   </header>
 
   <nav>
@@ -116,17 +115,13 @@
 
     <section id="como-comprar">
       <h2>¿Cómo comprar?</h2>
-      <p>
-        Si ves algo que te interesa,
-        escríbeme por mensaje.
-      </p>
+      <p>Si ves algo que te interesa, escríbeme por mensaje.</p>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
       <p>Facebook: Uriona Store</p>
       <p>Ciudad: Oruro, Bolivia</p>
-
       <form>
         <input type="email" placeholder="Tu correo electrónico">
         <button type="submit">Enviar</button>
@@ -135,10 +130,7 @@
 
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <p>
-        Soy emprendedor en Oruro. Comencé este negocio con pocos productos
-        Mi objetivo es ofrecer productos de calidad a buen precio.
-      </p>
+      <p>Soy emprendedor en Oruro. Comencé este negocio con pocos productos. Mi objetivo es ofrecer productos de calidad a buen precio.</p>
     </section>
 
   </main>
