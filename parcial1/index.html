@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floreria La Orquidea</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header id="inicio">
+    <h1>Floreria La Orquidea</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#arreglos">Nuestros arreglos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="arreglos">
+      <h2>Nuestros arreglos</h2>
+      <p>Arreglos florales frescos para toda ocasion.</p>
+      <ul>
+        <li>Ramo de rosas - Bs 60</li>
+        <li>Ramo de girasoles - Bs 35</li>
+        <li>Planta en maceta - Bs 20</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Encarga tus flores</h2>
+      <form>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="correo">Correo electronico:</label>
+        <input type="email" id="correo" required>
+
+        <label for="detalle">Detalle del pedido:</label>
+        <textarea id="detalle"></textarea>
+      </form>
+
+      <button type="button" id="btn-confirmar">Hacer mi pedido</button>
+      <p id="mensaje" class="oculto"></p>
+    </section>
+  </main>
+
+  <footer>
+    Parcial 1 - Erick Weimar Uriona Fernandez - 12 de octubre de 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
