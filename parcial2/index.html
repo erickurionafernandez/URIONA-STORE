@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterinaria Patitas</title>
+</head>
+<body>
+
+  <header>
+    <h1>Veterinaria Patitas</h1>
+    <p>Reserva tu turno en linea de forma rapida y segura.</p>
+  </header>
+
+  <main>
+    <form id="form-turno" novalidate method="POST" action="procesar.php">
+      
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo electronico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="mascota">Contanos de tu mascota:</label>
+      <textarea id="mascota" name="mascota"></textarea>
+
+      <button type="submit">Reservar mi turno</button>
+      
+      <p id="aviso-turno" class="aviso"></p>
+    </form>
+  </main>
+
+  <footer>
+    Parcial 2 - Erick Weimar Uriona Fernandez - 20 de octubre de 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
